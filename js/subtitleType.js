@@ -6,7 +6,6 @@
                 let subContent = new Array();
                 const from = data.from;
                 subContent.unshift(data.hitokoto, from);
-                const sub = subContent[0].toString();
                 var typewriter = new Typewriter('#subtitle', {
                     loop: true,
                     delay: 75,
