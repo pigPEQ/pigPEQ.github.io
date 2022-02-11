@@ -80,9 +80,6 @@ figure.highlight .gutter {
   background: #f2f2f7;
   color: #3a3a3c;
 }
-figure.highlight .highlight-body {
-  margin: 0.7rem;
-}
 code {
   border-radius: 8px;
   margin: 2px;
@@ -126,7 +123,7 @@ pre .caption {
 .content blockquote {
   background-color: #f8f8f8 !important;
   border-left: none !important;
-  border-radius: 5px;
+  border-radius: 0;
   margin: 20px 0;
 }
 .content blockquote p {
@@ -11798,9 +11795,10 @@ figure.highlight figcaption.level .level-right a {
 }
 figure.highlight .highlight-body {
   overflow: auto;
+  margin: 0;
 }
 figure.highlight .gutter {
-  text-align: right;
+  text-align: left !important;
 }
 figure.highlight .tag,
 figure.highlight .title,

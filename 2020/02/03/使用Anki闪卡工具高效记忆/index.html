@@ -94,10 +94,10 @@
 <li>git</li>
 </ul>
 <p>1.进入云主机，如果没安装相应版本，请先安装环境。<br>2.环境检查没问题后，从github上clone服务器源码：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/tsudoko/anki-sync-server.git</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/tsudoko/anki-sync-server.git</span><br></pre></td></tr></table></figure>
 
 <p>3.安装git子模块和python模块环境</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> anki-sync-server目录下</span></span><br><span class="line">git submodule update --init</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> anki-bundled目录下</span></span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install webob</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> anki-sync-server目录下</span></span><br><span class="line">git submodule update --init</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> anki-bundled目录下</span></span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">pip install webob</span><br></pre></td></tr></table></figure>
 
 <h4 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h4><p>1.安装完成后，如果有需要可以更改服务器的配置文件ankisyncd.conf。</p>
 <article class="message is-success"><div class="message-body">
@@ -110,17 +110,17 @@
 <li>base_media_url对应媒体文件目录。</div></article></li>
 </ul>
 <p>2.添加服务器用户，并为其设定密码。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./ankisyncctl.py adduser &lt;username&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./ankisyncctl.py adduser &lt;username&gt;</span><br></pre></td></tr></table></figure>
 
 <h4 id="服务器运行"><a href="#服务器运行" class="headerlink" title="服务器运行"></a>服务器运行</h4><p>在<code>anki-sync-server</code>目录下后台启动服务器，即ankisyncd文件。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nohup python -m ankisyncd &amp;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup python -m ankisyncd &amp;</span><br></pre></td></tr></table></figure>
 
 <p>或者使用<code>screen</code>：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 新建窗口</span></span><br><span class="line">Screen -S anki</span><br><span class="line"><span class="meta">#</span><span class="bash"> 运行服务器</span></span><br><span class="line">python -m ankisyncd</span><br><span class="line"><span class="meta">#</span><span class="bash"> 看到下面这个窗口时，ctrl A + D关闭窗口，保持后台运行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 新建窗口</span></span><br><span class="line">Screen -S anki</span><br><span class="line"><span class="meta">#</span><span class="bash"> 运行服务器</span></span><br><span class="line">python -m ankisyncd</span><br><span class="line"><span class="meta">#</span><span class="bash"> 看到下面这个窗口时，ctrl A + D关闭窗口，保持后台运行</span></span><br></pre></td></tr></table></figure>
 
 <p>在网页中输入你的主机IP+端口号出现<code>Anki Sync Server</code>，说明服务器创建运行成功，如果没有显示，请检查。</p>
 <h4 id="Anki-PC端配置"><a href="#Anki-PC端配置" class="headerlink" title="Anki PC端配置"></a>Anki PC端配置</h4><p>在<code>Anki</code>组件添加下打开插件安装目录<code>addons21</code>，在其目录下创建文件夹<code>ankisyncd</code>，在<code>ankisyncd</code>文件夹下创建文件_ ini _.py，然后重启<code>anki</code>后点击同步，输入之前添加的服务器用户及密码，添加卡组文件，完成pc端的文件上传。</p>
-<figure class="highlight shell"><figcaption><span>点击展开代码 >folded</span></figcaption><table><tr><td class="code"><pre><span class="line">import anki.sync, anki.hooks, aqt</span><br><span class="line"></span><br><span class="line">addr = &quot;http://127.0.0.1:27701/&quot; # 你的服务器地址和端口号</span><br><span class="line">anki.sync.SYNC_BASE = &quot;%s&quot; + addr</span><br><span class="line">def resetHostNum():</span><br><span class="line">    aqt.mw.pm.profile[&#x27;hostNum&#x27;] = None</span><br><span class="line">anki.hooks.addHook(&quot;profileLoaded&quot;, resetHostNum)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><figcaption><span>点击展开代码 >folded</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import anki.sync, anki.hooks, aqt</span><br><span class="line"></span><br><span class="line">addr = &quot;http://127.0.0.1:27701/&quot; # 你的服务器地址和端口号</span><br><span class="line">anki.sync.SYNC_BASE = &quot;%s&quot; + addr</span><br><span class="line">def resetHostNum():</span><br><span class="line">    aqt.mw.pm.profile[&#x27;hostNum&#x27;] = None</span><br><span class="line">anki.hooks.addHook(&quot;profileLoaded&quot;, resetHostNum)</span><br></pre></td></tr></table></figure>
 
 <div class="notification is-danger">
 <p>注意，如果你需要更改端口号必须保证在安全组中放行了该端口。</p>
