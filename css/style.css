@@ -86,6 +86,7 @@ figure.highlight figcaption,
 figure.highlight .gutter {
   background: #f2f2f7;
   color: #3a3a3c;
+  text-align: left !important;
 }
 code {
   border-radius: 8px;
@@ -12338,7 +12339,8 @@ body.dark {
   background-color: transparent !important;
 }
 .dark .content table thead td,
-.dark .content table thead th {
+.dark .content table thead th,
+.dark figure.highlight .gutter {
   color: #fff !important;
 }
 .dark .code-type {

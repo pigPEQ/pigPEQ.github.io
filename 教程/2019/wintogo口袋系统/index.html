@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>WinToGo口袋系统 - MSpace</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="MSpace"><meta name="msapplication-TileImage" content="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="MSpace"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="口袋系统WinToGo是一款简单、易用且免费的安装Win 10到U盘、移动硬盘软件。主要为便携、临时替代、节约空间而生；如果你经常出差，把Windows安装到U盘，带上U盘即可；系统不能启动，用WinToGo快速替代，不影响工作；苹果电脑直接把Windows安装到U盘，节省本地磁盘空间，方便管理。本文为在外部存储介质中为Mac os安装windows系统的教程，帮助缓解本地存储空间的压力。"><meta property="og:type" content="blog"><meta property="og:title" content="WinToGo口袋系统"><meta property="og:url" content="https://pigpeq.github.io/%E6%95%99%E7%A8%8B/2019/wintogo%E5%8F%A3%E8%A2%8B%E7%B3%BB%E7%BB%9F/"><meta property="og:site_name" content="MSpace"><meta property="og:description" content="口袋系统WinToGo是一款简单、易用且免费的安装Win 10到U盘、移动硬盘软件。主要为便携、临时替代、节约空间而生；如果你经常出差，把Windows安装到U盘，带上U盘即可；系统不能启动，用WinToGo快速替代，不影响工作；苹果电脑直接把Windows安装到U盘，节省本地磁盘空间，方便管理。本文为在外部存储介质中为Mac os安装windows系统的教程，帮助缓解本地存储空间的压力。"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/wallroom-2880x1800-bg-88720b8.jpg"><meta property="article:published_time" content="2019-07-15T13:30:26.000Z"><meta property="article:modified_time" content="2022-02-11T15:08:16.733Z"><meta property="article:author" content="ChenL"><meta property="article:tag" content="少数派"><meta property="article:tag" content="装机"><meta property="article:tag" content="操作系统"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/wallroom-2880x1800-bg-88720b8.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://pigpeq.github.io/%E6%95%99%E7%A8%8B/2019/wintogo%E5%8F%A3%E8%A2%8B%E7%B3%BB%E7%BB%9F/"},"headline":"MSpace","image":["https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/wallroom-2880x1800-bg-88720b8.jpg"],"datePublished":"2019-07-15T13:30:26.000Z","dateModified":"2022-02-11T15:08:16.733Z","author":{"@type":"Person","name":"ChenL"},"description":"口袋系统WinToGo是一款简单、易用且免费的安装Win 10到U盘、移动硬盘软件。主要为便携、临时替代、节约空间而生；如果你经常出差，把Windows安装到U盘，带上U盘即可；系统不能启动，用WinToGo快速替代，不影响工作；苹果电脑直接把Windows安装到U盘，节省本地磁盘空间，方便管理。本文为在外部存储介质中为Mac os安装windows系统的教程，帮助缓解本地存储空间的压力。"}</script><link rel="canonical" href="https://pigpeq.github.io/%E6%95%99%E7%A8%8B/2019/wintogo%E5%8F%A3%E8%A2%8B%E7%B3%BB%E7%BB%9F/"><link rel="icon" href="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/img/favicon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/tomorrow.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="MSpace" type="application/atom+xml">
+</head><body class="is-3-column"><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/dark.js"></script><canvas id="universe"></canvas><nav class="navbar navbar-main"><div class="container"><div class="navbar-menu"><a class="navbar-item navbar-logo" href="/">MSpace</a><div class="navbar-start"><a class="navbar-item" href="/">首页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/message">留言</a><a class="navbar-item" href="/friend">友链</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_target" rel="noopener" title="网盘" href="https://www.aliyundrive.com/s/hYKSWcxqF6Z/folder/61f75f557d2b6757bfec4aabb41763ba3cc4e448"><i class="fas fa-cloud-download-alt"></i></a><a class="navbar-item dark" id="dark-nav" title="Dark Mode" href="javascript:;"><i class="fas fa-moon" id="dark-icon"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-9-widescreen"><div class="controller"></div><div class="card"><div class="card-image"><span class="image is-7by3"><img class="fill" src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/wallroom-2880x1800-bg-88720b8.jpg" alt="WinToGo口袋系统"><img class="fill_dark" src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/wallroom-2880x1800-bg-88720b8.jpg" alt="WinToGo口袋系统"></span></div><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item create-data"><i class="far fa-calendar-alt">&nbsp;&nbsp;</i><time dateTime="2019-07-15T13:30:26.000Z" title="2019-07-15T13:30:26.000Z">2019-07-15</time>发表</span><span class="level-item cate"><i class="far fa-folder-open">  </i><a class="link-muted" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></span><span class="level-item read-time"><i class="far fa-clock">  </i>10 分钟读完 (大约 1430 个字)</span><span class="level-item leancloud_visitors" id="/%E6%95%99%E7%A8%8B/2019/wintogo%E5%8F%A3%E8%A2%8B%E7%B3%BB%E7%BB%9F/" data-flag-title="WinToGo口袋系统"><i class="far fa-eye"></i>&nbsp;&nbsp;<span id="twikoo_visitors"><i class="fa fa-spinner fa-spin"></i></span> 次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">WinToGo口袋系统</h1><div class="content"><p>口袋系统WinToGo是一款简单、易用且免费的安装Win 10到U盘、移动硬盘软件。主要为便携、临时替代、节约空间而生；如果你经常出差，把Windows安装到U盘，带上U盘即可；系统不能启动，用WinToGo快速替代，不影响工作；苹果电脑直接把Windows安装到U盘，节省本地磁盘空间，方便管理。本文为在外部存储介质中为Mac os安装windows系统的教程，帮助缓解本地存储空间的压力。</p>
+<span id="more"></span>
+
+<h3 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h3><p>在系统安装之前，你需要准备以下工具和软件：</p>
+<ul>
+<li><p>硬盘 *1，硬盘盒 *1</p>
+</li>
+<li><p>win10镜像</p>
+</li>
+<li><p>VMware虚拟机</p>
+</li>
+<li><p>WinToGo工具</p>
+</li>
+<li><p>WindowsSupport驱动工具包</p>
+</li>
+</ul>
+<h4 id="硬盘"><a href="#硬盘" class="headerlink" title="硬盘"></a>硬盘</h4><p>微软官方对WinToGo的要求为：接口为 USB 2.0及以上，容量为 32 G 及以上，为了良好的用户体验，毋庸置疑，我们需要准备一块性能优异的硬盘。对于硬盘的选择，如果您的预算有限，请偏向小容量SSD（固态硬盘）或者高性能机械硬盘，虽然官方没有为这些硬盘进行认证，不过这影响不大，你仍然可以照常安装 WTG到这些硬盘里，并且实际体验效果也不差。以下是我在本教程中使用选择：</p>
+<ul>
+<li><p>Samsung SSD 750 EVO 120GB</p>
+</li>
+<li><p>某宝的硬盘盒  </p>
+</li>
+</ul>
+<h4 id="win10镜像"><a href="#win10镜像" class="headerlink" title="win10镜像"></a>win10镜像</h4><p>镜像ISO文件可以在<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/windows">官方地址</a>下载，也可以通过其他途径获取。</p>
+<div class="notification is-danger">
+<p>注意，镜像要求为win10专业版！</p>
+</div>
+
+<p>　</p>
+<h4 id="VMware虚拟机"><a href="#VMware虚拟机" class="headerlink" title="VMware虚拟机"></a>VMware虚拟机</h4><p>VMware[官方下载地址][2]，如果是第一次使用，可以免费试用15天；如果无试用机会，请购买支持正版软件或者网上下载VMware keygen注册机，将注册机生成的注册码输入到许可认证栏中实现注册激活。 </p>
+<p>1.下载完成后打开VMware应用程序。</p>
+<p><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows04.png"></p>
+<p>2.以下载好的windows 10的镜像文件作为安装文件创建新的虚拟机。</p>
+<div class="justified-gallery">
+
+<p><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows05.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows06.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows07.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows08.png"></p>
+</div>
+
+<p>3.window 10虚拟机安装成功</p>
+<p><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows09.png"></p>
+<h4 id="WTG工具"><a href="#WTG工具" class="headerlink" title="WTG工具"></a>WTG工具</h4><p>通过此功能，你可以将 Windows 「浓缩」到一个 USB 存储设备上并随身携带，并且由于是储存在<strong>外置设备</strong>中，所以不用担心本机的容量问题。这对那些对 Windows 有短暂需求而又不想装 Boot Camp和虚拟机的 Mac 用户来说可谓非常友好了 ，[跳转下载地址][3]。</p>
+<h4 id="WindowsSupport工具包"><a href="#WindowsSupport工具包" class="headerlink" title="WindowsSupport工具包"></a>WindowsSupport工具包</h4><p>WindowsSupport是在windows系统下支持Mac硬件驱动支持包，包括键盘、Touch Bar、触控板、声卡等驱动，在Boot Camp下可以下载当前Mac支持的驱动包文件。</p>
+<ol>
+<li><p>打开Boot Camp应用程序</p>
+</li>
+<li><p>菜单栏 → 操作 → 下载windows支持软件</p>
+</li>
+</ol>
+<h3 id="安装阶段"><a href="#安装阶段" class="headerlink" title="安装阶段"></a>安装阶段</h3><ol>
+<li><p>在Mac os中使用磁盘工具初始化准备的硬盘。</p>
+</li>
+<li><p>重新插拔硬盘，选择连接到windows。</p>
+</li>
+<li><p>在磁盘管理中格式化硬盘。</p>
+</li>
+</ol>
+<p><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows15.png"></p>
+<ol start="4">
+<li>为虚拟机连接CD/DVD驱动器。</li>
+</ol>
+<div class="justified-gallery">
+
+<p><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows16.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows17.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows18.png"></p>
+</div>
+
+<ol start="5">
+<li>打开共享文件夹下的win to usb应用程序并安装。</li>
+<li>（可选）破解win to usb。</li>
+</ol>
+<ul>
+<li>将文件夹中的破解补丁拷贝到win to usb的安装目录下<br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows22.png"></li>
+<li>断网状态下打开破解补丁，点击patch，出现patching done说明补丁成功。</li>
+<li>断网状态下打开win to usb应用程序，输入注册码 <em>LJXBH443-EK4FX4TN-4G4R3X9W-WGZ4N4SK-U7MF6TG4-ZJZUQFFR</em> 后，输入任意数字，提示激活成功需要重新打开软件。</li>
+</ul>
+<ol start="7">
+<li>在win to usb中选择来自CD/DVD的镜像文件。</li>
+</ol>
+<ul>
+<li>选择window 10 专业版</li>
+<li>等待安装完成</li>
+</ul>
+<div class="justified-gallery">
+
+<p><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows24.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows25.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows26.png"><br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows27.png"></p>
+</div>
+
+<ol start="8">
+<li>将WindowsSupport驱动包拷贝到目标磁盘中。</li>
+<li>重新启动电脑，在苹果logo出现的界面长按option按键，选择EFI Boot，接下来只需要静心等待系统初始化结束。</li>
+<li>系统初始化的过程中有一个小问题需要注意一下：系统要求输入用户名，注意这时候我们的键盘、触控板、TouchBar都是无法使用的，可以观察到键盘背光和TouchBar都是不亮的，推荐使用屏幕键盘或者外置键盘，完成用户信息录入。</li>
+<li>windows 10系统初始化完毕后，下一步需要安装WindowsSupport驱动包从而让键盘、触控板等支持windows 10，打开WindowsSupport文件夹，运行setup安装程序，安装成功后重启系统。</li>
+<li>至此windows 10已经成功安装，重新启动后系统会自动装载部分驱动：蓝牙、声卡、Intel显卡，这需要一些时间，但不影响系统的正常使用。<br><img src="https://chenspace.oss-cn-shanghai.aliyuncs.com/uPic/mac-windows32.jpg"></li>
+</ol>
+</div><div class="article-licensing box"><div class="licensing-title"><p>WinToGo口袋系统</p><p><a href="https://pigpeq.github.io/教程/2019/wintogo口袋系统/">https://pigpeq.github.io/教程/2019/wintogo口袋系统/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>ChenL</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2019-07-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-02-11</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="" rel="noopener" target="_blank" title="CC BY 4.0" href="https://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a></p></div></div></div></div></div><span class="article-tags is-size-7 last_update"><i class="fas fa-wrench">&nbsp;&nbsp;</i><time dateTime="2022-02-11T15:08:16.733Z" title="2022-02-11T15:08:16.733Z">2022-02-11</time>更新</span><div class="article-tags is-size-7 mb-4"><a class="link-muted mr-2" rel="tag" href="/tags/%E5%B0%91%E6%95%B0%E6%B4%BE/">少数派</a><a class="link-muted mr-2" rel="tag" href="/tags/%E8%A3%85%E6%9C%BA/">装机</a><a class="link-muted mr-2" rel="tag" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></div><div class="sharethis-inline-share-buttons"></div><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/sharethis.js#property=61e98b989343fb0019ed0b2a&amp;product=inline-share-buttons" defer></script></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/img/Alipay-qrcode.jpg" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/img/Wechat-qrcode.jpg" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/2020/%E4%BD%BF%E7%94%A8anki%E9%AB%98%E6%95%88%E8%AE%B0%E5%BF%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">使用Anki高效记忆</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/%E6%95%99%E7%A8%8B/2019/%E9%AD%94%E6%94%B9%E7%BB%88%E7%AB%AF/"><span class="level-item">魔改终端</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content twikoo" id="twikoo"></div><script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.15/dist/twikoo.all.min.js"></script><script>twikoo.init({
+      envId: 'https://twikoo-pigpeq.vercel.app/',
+      onCommentLoaded: function () {
+        var commentContents = document.getElementsByClassName('tk-content');
+        for (var i = 0; i < commentContents.length; i++) {
+          var commentItem = commentContents[i];
+          var imgEls = commentItem.getElementsByTagName('img');
+          if (imgEls.length > 0) {
+            for (var j = 0; j < imgEls.length; j++) {
+              var imgEl = imgEls[j];
+              var aEl = document.createElement('a');
+              aEl.setAttribute('class', 'tk-lg-link');
+              aEl.setAttribute('href', imgEl.getAttribute('src'));
+              aEl.setAttribute('data-src', imgEl.getAttribute('src'));
+              aEl.appendChild(imgEl.cloneNode(false));
+              imgEl.parentNode.insertBefore(aEl, imgEl.nextSibling);
+              imgEl.remove();
+            }
+            if (typeof $.fn.lightGallery === 'function') {
+              $(commentItem).lightGallery({
+                selector: '.tk-lg-link'
+              });
+            }
+          }
+        }
+      }
+    });</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/img/avatar.jpg" alt="ChenL"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">ChenL</p><p class="is-size-6 is-block">不念过去，不畏将来.</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Shanghai, China</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">8</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">5</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">22</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/pigPEQ" target="_blank" rel="noopener"><i class="fab fa-github"></i>  Follow</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Weibo" href="https://weibo.com/u/5664924819"><i class="fab fa-weibo"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="QQ" href="tencent://message/?uin=1083341411&amp;Site=pigPEQ.github.io&amp;Menu=yes"><i class="fab fa-qq"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Mail" href="mailto:1083341411@qq.com"><i class="fas fa-envelope"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/atom.xml"><i class="fas fa-rss"></i></a></div><hr style="margin: 0"><div id="hitokoto-container"><span id="subtitle"></span></div></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#准备阶段"><span class="level-left"><span class="level-item">1</span><span class="level-item">准备阶段</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#硬盘"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">硬盘</span></span></a></li><li><a class="level is-mobile" href="#win10镜像"><span class="level-left"><span class="level-item">1.2</span><span class="level-item">win10镜像</span></span></a></li><li><a class="level is-mobile" href="#VMware虚拟机"><span class="level-left"><span class="level-item">1.3</span><span class="level-item">VMware虚拟机</span></span></a></li><li><a class="level is-mobile" href="#WTG工具"><span class="level-left"><span class="level-item">1.4</span><span class="level-item">WTG工具</span></span></a></li><li><a class="level is-mobile" href="#WindowsSupport工具包"><span class="level-left"><span class="level-item">1.5</span><span class="level-item">WindowsSupport工具包</span></span></a></li></ul></li><li><a class="level is-mobile" href="#安装阶段"><span class="level-left"><span class="level-item">2</span><span class="level-item">安装阶段</span></span></a></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">MSpace</a><p class="is-size-7"><span>&copy; 2019-2022 ChenL</span><span> Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></span><br><span>&copy; </span>「版权声明」：本站所有内容均为原创或收集于互联网,<br><span>   便于网友与自己学习交流，如有侵权，请<a href="/message" target="_blank" rel="noopener">留言</a>，立即处理</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Deployed on Vercel" href="https://vercel.com"><i class="fas fa-caret-square-up"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.15/dist/twikoo.all.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/main.js"></script><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/friend.js"></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script><script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script><script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script><script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/universe.js"></script><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/subtitleType.js"></script><script src="https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/js/custom.js"></script></body></html>

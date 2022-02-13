@@ -131,7 +131,8 @@ body.dark {
   background-color: transparent !important;
 }
 .dark .content table thead td,
-.dark .content table thead th {
+.dark .content table thead th,
+.dark figure.highlight .gutter {
   color: #fff !important;
 }
 .dark .code-type {
