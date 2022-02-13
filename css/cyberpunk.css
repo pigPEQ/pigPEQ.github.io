@@ -12739,6 +12739,9 @@ small
 .article .content p {
   text-indent: 2em;
 }
+.article .content sup {
+  text-indent: 0;
+}
 #hitokoto-container {
   height: 7.5rem;
   text-align: center;
