@@ -8,12 +8,6 @@
 .article .content p {
   text-indent: 2em;
 }
-.article .content sup {
-  text-indent: 0;
-}
-.footnotes {
-  font-size: 0.7rem;
-}
 #hitokoto-container {
   height: 7.5rem;
   text-align: center;
