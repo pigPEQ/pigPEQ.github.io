@@ -57,6 +57,9 @@ span,
 .article-meta .level-left .fa-eye {
   color: #34c759;
 }
+body {
+  background: url("https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/img/background.png");
+}
 .content {
   text-align: justify;
 }
@@ -10743,7 +10746,6 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background: url("./img/background.png");
 }
 body > .section {
   flex-grow: 1;
