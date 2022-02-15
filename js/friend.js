@@ -1,5 +1,5 @@
 $(function () { //获取处理友链数据
-  $.getJSON("../json_data/friend.json", function (data) {
+  $.getJSON("https://cdn.jsdelivr.net/gh/pigPEQ/pigPEQ.github.io/json_data/friend.json", function (data) {
 
       // var data0 = data[0];
       $('.links-content').html("");
