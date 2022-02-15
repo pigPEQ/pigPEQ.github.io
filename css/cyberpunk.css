@@ -10744,6 +10744,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background: url("./img/background.png");
 }
 body > .section {
   flex-grow: 1;
