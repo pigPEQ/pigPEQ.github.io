@@ -12,11 +12,6 @@ h5 {
 .card-content .menu-list .level.is-mobile .level-item:last-child {
   word-break: break-all;
 }
-body {
-  background: url("/img/background.png");
-!important
-}
-!important
 html,
 body,
 p,
