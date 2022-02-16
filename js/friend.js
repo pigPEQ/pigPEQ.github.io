@@ -18,9 +18,9 @@ $(function () { //获取处理友链数据
               html += "    <img class=\"ava\" src=\"" + e.src + "\">";
           }
           html +=
-              "<div class='text-desc' title=\""+e.desc+"\">    网站名称：" + e.name +
-              "    <br>网站地址：<a href=\"" + e.url + "\" target=\"_blank\">" + e.url + "</a>" +
-              "<br>网站简介：" + e.desc + "</div>" +
+              "<div class='text-desc' title=\""+e.desc+"\">    名称：" + e.name +
+              "    <br>地址：<a href=\"" + e.url + "\" target=\"_blank\">" + e.url + "</a>" +
+              "<br>简介：" + e.desc + "</div>" +
               "    </div>";
 
           $('.links-content').append(html);
