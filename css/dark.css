@@ -30,6 +30,14 @@ body.dark {
   backdrop-filter: blur(10px);
   background-color: transparent !important;
 }
+.dark .navbar-logo .logo-img,
+.dark .footer-logo .logo-img {
+  display: none;
+}
+.dark .navbar-logo .logo-img-dark,
+.dark .footer-logo .logo-img-dark {
+  display: inline-block;
+}
 .dark .footer {
   -webkit-backdrop-filter: blur(0);
   backdrop-filter: blur(0);
