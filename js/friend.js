@@ -11,17 +11,19 @@ $(function () { //获取处理友链数据
       });
       $('.links-content').append("<div class='friend-title-item'></div>");
       $.each(data, function (i, e) {
-          var html = "<div class=\"friend-card-item\">";
+          var html = "<div class=\"box\" style=\"width:96%\"><article class=\"media\" style=\"display: flex;align-items: center;\"><div class=\"media-left\">";
           if (e.src == undefined) {
               html += "    <img class=\"ava\" src=\"/img/links/nopic.jpg\" title=\"图片链接不可用，使用的默认图片\">";
           } else {
-              html += "    <img class=\"ava\" src=\"" + e.src + "\">";
+              html += "<img style=\"border-radius:50%\" src=\"" + e.src + "\" width=\"100\" height=\"100\"></div>";
           }
           html +=
-              "<div class='text-desc' title=\""+e.desc+"\">    名称：" + e.name +
-              "    <br>地址：<a href=\"" + e.url + "\" target=\"_blank\">" + e.url + "</a>" +
-              "<br>简介：" + e.desc + "</div>" +
-              "    </div>";
+              "<div style=\"margin-left: 2rem;\"></div><div class=\"media-content\">" +
+              "<div class=\"content\">" +
+              "<div style=\"margin-bottom: 0.5rem\"><strong><i class=\"fa fa-bookmark\"></i> " + e.name + "</strong></div>" +
+              "<div style=\"margin-bottom: 0.5rem\"><i class=\"fa fa-link\"></i>" + " " + "<a href=\"" + e.url + "\" target=\"_blank\"><span style=\"color:#3273dc\">" + e.url + "</span></a>" +
+              "</div><div>" + e.desc + "</div>" + " </div></div></div></article></div>";
+
 
           $('.links-content').append(html);
       });
