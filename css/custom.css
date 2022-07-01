@@ -93,3 +93,6 @@ article.article .pin-icon {
 .hbe-button {
   margin: 2rem auto !important;
 }
+.message .message-body p {
+  text-indent: 0em;
+}

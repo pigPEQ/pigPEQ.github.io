@@ -11,7 +11,7 @@ $(function () { //获取处理友链数据
       });
       $('.links-content').append("<div class='friend-title-item'></div>");
       $.each(data, function (i, e) {
-          var html = "<div class=\"box\" style=\"width:96%\"><article class=\"media\" style=\"display: flex;align-items: center;\"><div class=\"media-left\">";
+          var html = "<div class=\"box\" style=\"width:95%;\"><article class=\"media\" style=\"display: flex;\" ><div class=\"media-left\">";
           if (e.src == undefined) {
               html += "    <img class=\"ava\" src=\"/img/links/nopic.jpg\" title=\"图片链接不可用，使用的默认图片\">";
           } else {
